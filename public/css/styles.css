@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Helvetica;
+    text-align: center;
+    background: local;
+    background-image: url("/img/fondo1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+  }
+
+h1{
+    color: aliceblue;
+}
+
+.barraNav{
+    display: flex;
+    padding: 1%;
+    background: linear-gradient(#242323, #838282); 
+    font-weight: bold;
+    font-size:medium;
+    width: 100%;
+    color: aliceblue;
+    
+}
+
+footer{
+    display: flex;
+    padding: 1%;
+    background: linear-gradient(#303038, #1e3858); 
+    font-weight: bold;
+    font-size:120%;
+    width: 100%;
+    color: aliceblue;
+    cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all; 
+
+}
+
+.logos{
+    justify-content: center;
+    position:relative;
+    width: 3%;
+    color: rgb(149, 183, 185);
+}
+
+a {
+    width: 25%;
+    color: aliceblue;
+}  

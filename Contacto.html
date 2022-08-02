@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./public/css/formul.css" rel="stylesheet">
+    <link href="./public/css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ab05c0d697.js" crossorigin="anonymous"></script>
+
+    <title>Contacto</title>
+</head>
+<body>
+    <h1>Adrian Santillan - Business Advisor </h1>
+
+    <nav>
+        <section class="barraNav">
+        <a href="./Index.html" class="selected">
+                <h4>Index</h4>
+        </a>
+    
+        <a href="./Contacto.html" class="selected">
+                <h4>Contacto</h4>
+        </a>
+    
+        <a href="./Proyectos.html" class="selected">
+                <h4>Proyectos</h4>
+        </a>
+    
+        <a href="./QuienSoy.html" class="selected">
+                <h4>QuienSoy</h4>
+        </a>
+    
+        <a href="./CarroselGral.html" class="selected">
+                <h4>CarrouselGral</h4>
+        </a>
+    </section>
+    </nav>
+
+    <div class="form_1 ">
+        <br>
+        <h2>Espero tu mensaje!. " NO existen consultas TONTAS, SINO respuestas tontas"</h2>
+        <br>
+        <br>
+		<form action="/create" method="POST" class="formul-1">
+
+                <label for="user">Nombre </label>
+                <input type="text" name="userName" required tabindex="1" autofocus>            
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" required tabindex="2">
+                <br>
+                <label for="Telefono">Telefono</label>
+			    <input type="Telefono" name="pass">
+                <br>
+                <label for="Asunto">Asunto</label>                          
+                    <select id="asunto" name="asunto" class="select-css">
+                        <option value="Desarrollos Web" selected>Desarrollos Web</option>
+                        <option value="Aplicaciones Web">Aplicaciones Web</option>
+                        <option value="Boots y automatizacion de Procesos">Boots y automatizacion de Procesos</option>
+                        <option value="Finanzas Descentralizadas - Blockchain - Criptomonedas">Finanzas Descentralizadas - Blockchain - Criptomonedas</option>
+                        <option value="Consultas Varias">Consultas Varias</option>                  
+                    </select>
+                <br>
+                <br>
+                <br>
+                <br>
+                <label for="comment">Comentarios</label>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                
+              
+                <button href="enviar" class="btn-enviar">Enviar</button>
+		</form>		
+	  
+
+</body>
+<footer >
+    <imput class="logos"><i class="fa-brands fa-square-instagram"></i> </imput>
+    <imput class="logos"><i class="fa-brands fa-linkedin"></i></imput>
+    <imput class="logos"><i class="fa-brands fa-facebook"></i></imput>
+    <imput class="logos"><i class="fa-brands fa-whatsapp"></i></imput>
+</footer>
+</html>
