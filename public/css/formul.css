@@ -52,3 +52,13 @@ body{
     background-image: linear-gradient(#f7a151,#917045);
     
   }
+
+.formInt{
+    width: 100%;
+    padding: 1%;
+}
+
+.formInt, select{
+    width: 100%;
+    padding: 1.5%;
+}

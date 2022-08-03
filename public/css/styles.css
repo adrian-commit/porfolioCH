@@ -27,6 +27,7 @@ h1{
     width: 100%;
     color: aliceblue;
     
+    
 }
 
 footer{
@@ -39,7 +40,9 @@ footer{
     color: aliceblue;
     cursor: pointer;
 	text-transform: uppercase;
-	transition: .3s ease all; 
+	transition: .3s ease all;
+    justify-content:flex-start;
+     
 
 }
 
@@ -48,9 +51,11 @@ footer{
     position:relative;
     width: 3%;
     color: rgb(149, 183, 185);
+    flex-wrap: wrap;
 }
 
 a {
     width: 25%;
     color: aliceblue;
+    flex-wrap: wrap; 
 }  

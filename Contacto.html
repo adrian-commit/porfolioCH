@@ -42,19 +42,19 @@
         <h2>Espero tu mensaje!. " NO existen consultas TONTAS, SINO respuestas tontas"</h2>
         <br>
         <br>
-		<form action="/create" method="POST" class="formul-1">
 
+		<form action="/create" method="POST" class="formul-1">
                 <label for="user">Nombre </label>
-                <input type="text" name="userName" required tabindex="1" autofocus>            
+                <input type="text" name="userName" required tabindex="1" autofocus class="formInt">            
                 <br>
                 <label for="email">Email</label>
-                <input type="email" name="email" required tabindex="2">
+                <input type="email" name="email" required tabindex="2" class="formInt">
                 <br>
                 <label for="Telefono">Telefono</label>
-			    <input type="Telefono" name="pass">
+			    <input type="Telefono" name="pass" class="formInt">
                 <br>
                 <label for="Asunto">Asunto</label>                          
-                    <select id="asunto" name="asunto" class="select-css">
+                    <select id="asunto" name="asunto" class="select-css" class="formInt">
                         <option value="Desarrollos Web" selected>Desarrollos Web</option>
                         <option value="Aplicaciones Web">Aplicaciones Web</option>
                         <option value="Boots y automatizacion de Procesos">Boots y automatizacion de Procesos</option>
@@ -66,7 +66,7 @@
                 <br>
                 <br>
                 <label for="comment">Comentarios</label>
-                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <textarea name="comment" id="comment" cols="40" rows="10"></textarea>
                 
               
                 <button href="enviar" class="btn-enviar">Enviar</button>
@@ -75,9 +75,9 @@
 
 </body>
 <footer >
-    <imput class="logos"><i class="fa-brands fa-square-instagram"></i> </imput>
-    <imput class="logos"><i class="fa-brands fa-linkedin"></i></imput>
-    <imput class="logos"><i class="fa-brands fa-facebook"></i></imput>
-    <imput class="logos"><i class="fa-brands fa-whatsapp"></i></imput>
+    <imput class="logos"><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></imput>
+        <imput class="logos"><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></imput>
+        <imput class="logos"><a href="https://es-la.facebook.com/"><i class="fa-brands fa-facebook"></i></a></imput>
+        <imput class="logos"><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a></imput>
 </footer>
 </html>
