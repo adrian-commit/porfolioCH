@@ -1,0 +1,207 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*GENERAL */
+
+body{
+    font-family: Helvetica;
+    background: linear-gradient(#aaa9a8, #202020);
+    text-align: center;
+    background: local;
+    background-image: url("/img/img-21.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+  }
+
+h1{
+    color: aliceblue;
+}
+
+.barraNav{
+    display: flex;
+    padding: 1%;
+    background: linear-gradient(#242323, #838282); 
+    font-weight:bold;
+    font-size:medium;
+    width: 100%;
+    color: aliceblue;
+    
+    
+}
+
+.carrusel{
+  display: flex;
+}
+
+.carrusel img{
+  margin: 10px;
+  border-radius: 30px;
+  border: 1px solid rgb(255, 3, 3);
+  
+}
+
+footer{
+    display: flex;
+    padding: 1%;
+    background: linear-gradient(#303038, #1e3858); 
+    font-weight: bold;
+    font-size:120%;
+    width: 100%;
+    color: aliceblue;
+    cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+    justify-content:flex-start;
+     
+
+}
+
+.logos{
+    justify-content: center;
+    position:relative;
+    width: 3%;
+    color: rgb(149, 183, 185);
+    flex-wrap: wrap;
+}
+
+a {
+    width: 25%;
+    color: aliceblue;
+    flex-wrap: wrap; 
+}
+
+/*FORMULARIO */
+.formul-1{
+    color:antiquewhite;
+    height: 10px;
+    padding: 3%;
+    width: 500px;
+    text-align: center;
+    font-size: 18px;
+    color:#fffdfd; 
+    background-color: #6B7280;height: max-content; border-radius: 10px; opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background: linear-gradient(#aaa9a8, #202020);
+    margin-left: 33%; 
+  }
+
+  .btn-enviar{
+    padding:15px;
+    margin: 50px 60px 100px 200px;
+    background-color: #000000;
+    background: linear-gradient(#fdb9b7, #6460a1);
+    width: 50%;
+    font-weight:900;
+    margin-left: 25%;
+    height: 50px;
+    font-size: 15px;
+    cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all; 
+  }
+
+  .formul-1 imput{
+    height: 50%;
+  }
+
+  h2{
+    color: antiquewhite;
+  }
+ 
+  .btn-enviar button:hover{
+    background-image: linear-gradient(#f7a151,#917045);
+    
+  }
+
+.formInt{
+    width: 100%;
+    padding: 1%;
+}
+
+.formInt, select{
+    width: 100%;
+    padding: 1.5%;
+}
+
+/*CARRUSEL*/
+.puntoCarrusel{
+  color: antiquewhite;
+  margin: 30px;
+  font-size: 18px;
+}
+
+/*LOGROS*/
+.logro{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.logro1{
+  background-color: rgb(247, 68, 68);
+  margin: 45px;
+  font-size:0;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  color: antiquewhite;
+  border-radius: 60%;
+}
+
+.logro2{
+  background-color: rgb(247, 68, 68);
+  margin: 45px;
+  font-size:0;
+  width: 190px;
+  height: 190px;
+  color: antiquewhite;
+  border-radius: 60%;
+}
+.logro3{
+  background-color: rgb(247, 68, 68);
+  margin: 45px;
+  width: 250px;
+  height: 250px;
+  font-size:0;
+  color: antiquewhite;
+  border-radius: 60%;
+}
+.logro4{
+  background-color: rgb(247, 68, 68);
+  margin: 45px;
+  width: 350px;
+  height: 350px;
+  font-size:0;
+  color: antiquewhite;
+  border-radius: 60%;
+}
+
+/*Presentacion Personal*/
+.present{
+  display: flex;
+  justify-content:center;
+  padding: 15px;
+}
+
+.presP p{
+  color: rgb(255, 255, 255);
+  width: 75%;
+  font-size:150%;
+  text-align:justify;
+  justify-content:center;
+  padding:3%;
+  background-color: #4e4e50;height: max-content; border-radius: 10px; opacity: 0.8;
+  border: 5px solid rgb(255, 0, 0);
+}
+
+
+
+
+
+
+
