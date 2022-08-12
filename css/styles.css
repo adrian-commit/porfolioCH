@@ -14,25 +14,82 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: auto;
   }
+
+/*Grid para Index */
+
+/*EFECTO DE APERTURA */
+/*.traslateA{
+  color: #000000;
+  background-color:#f14b35;
+  width: 150px;
+  height: 150px;
+  transition: .3s;
+  left: 0;
+  top: 0;
+  z-index: 300;
+  transform: translate(100px, 100px);
+
+ 
+}
+
+.traslateA :hover{
+  transform: translateY(500px);
+  background-color: #6460a1;
+
+}
+
+
+
+
+.traslateB {
+  color: #000000;
+  background-color:#f14b35;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 600;
+  transform: translate(500px, 500px);
+}*/
+
+
+
+/* Sigue el codigo*/
+
 
 h1{
     color: aliceblue;
 }
 
-.barraNav{
-    display: flex;
-    padding: 1%;
-    background: linear-gradient(#242323, #838282); 
-    font-weight:bold;
-    font-size:medium;
-    width: 100%;
-    color: aliceblue;   
+video{
+  padding: 0px;
+  width: 350px;
+  opacity: 0.7;  
 }
 
-.barraNav i{
-  font-size: 25px;
+
+/*Barra de Navegación */
+.barraNav  i img{
+  width: 35px;
+  height: 35px;
+}
+
+.barraNav{
+    display: flex;
+    background: linear-gradient(#242323, #838282); 
+    font-weight:bold;
+    width: 100%;
+    color: aliceblue;
+    flex-direction: column;   
+}
+
+.Nav {
+  display: flex;
+  font-size: 10px;
+  width: 100%;
+  padding: 5px;
 }
 
 .carrusel{
@@ -51,29 +108,26 @@ footer{
     padding: 1%;
     background: linear-gradient(#303038, #1e3858); 
     font-weight: bold;
-    font-size:120%;
+    font-size:90%;
     width: 100%;
     color: aliceblue;
     cursor: pointer;
-	text-transform: uppercase;
-	transition: .3s ease all;
+	  text-transform: uppercase;
+	  transition: .3s ease all;
     justify-content:flex-start;
-     
-
-}
+    justify-content: space-evenly;
+    }
 
 .logos{
-    justify-content: center;
     position:relative;
     width: 3%;
     color: rgb(149, 183, 185);
-    flex-wrap: wrap;
 }
 
 a {
-    width: 25%;
+    width: 40%;
     color: aliceblue;
-    flex-wrap: wrap; 
+    font-size:105%; 
 }
 
 /*FORMULARIO */
@@ -202,7 +256,21 @@ a {
   border: 5px solid rgb(255, 0, 0);
 }
 
+@media (min-width: 425px) {
+   .barraNav i {
+    flex-direction:row;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    }
 
+    .mein video{
+      width: 750px;
+      opacity: 0.7;  
+    }
+  
+}
 
 
 
