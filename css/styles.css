@@ -15,65 +15,77 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-/*Grid para Index */
-
-/*EFECTO DE APERTURA */
-/*.traslateA{
-  color: #000000;
-  background-color:#f14b35;
-  width: 150px;
-  height: 150px;
-  transition: .3s;
-  left: 0;
-  top: 0;
-  z-index: 300;
-  transform: translate(100px, 100px);
-
- 
+/*Grid del Inicio/Estructura Padre / Hijo / Base */
+  .container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 0.5fr 1fr 0.25fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "section"
+      "section"
+      "section"
+      "footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .footer { grid-area: footer; }
+  
+  .section { grid-area: section; }
+/*----------------------------------*/
+/*Grid del Quien Soy/Estructura Padre / Hijo / Base */
+.containerQS {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "sectionQS section2QS section3QS"
+    "sectionQS section2QS section3QS"
+    "sectionQS section2QS section3QS"
+    "sectionQS section2QS section3QS"
+    "sectionQS section2QS section3QS"
+    "footer footer footer";
 }
 
-.traslateA :hover{
-  transform: translateY(500px);
-  background-color: #6460a1;
+.sectionQS { grid-area: sectionQS; }
 
-}
+.header { grid-area: header; }
 
+.section2QS { grid-area: section2QS; }
 
+.section3QS { grid-area: section3QS; }
 
+.footer { grid-area: footer; }
 
-.traslateB {
-  color: #000000;
-  background-color:#f14b35;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 150px;
-  height: 150px;
-  z-index: 600;
-  transform: translate(500px, 500px);
-}*/
-
-
-
-/* Sigue el codigo*/
-
+/*---------------------------------------*/
 
 h1{
     color: aliceblue;
 }
 
 video{
-  padding: 0px;
+  padding: 5px;
   width: 350px;
   opacity: 0.7;  
 }
 
+.containerQS{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
 /*Barra de Navegación */
 .barraNav  i img{
   width: 35px;
   height: 35px;
+
 }
 
 .barraNav{
@@ -82,7 +94,8 @@ video{
     font-weight:bold;
     width: 100%;
     color: aliceblue;
-    flex-direction: column;   
+    flex-direction: column;
+     
 }
 
 .Nav {
@@ -92,24 +105,35 @@ video{
   padding: 5px;
 }
 
+/*carrusel */
 .carrusel{
   display: flex;
 }
 
 .carrusel img{
   margin: 10px;
+  width: 350px;
   border-radius: 30px;
   border: 1px solid rgb(255, 3, 3);
-  
 }
 
+.puntoCarrusel{
+  color: antiquewhite;
+  margin: 30px;
+  font-size: 10px;
+}
+
+
+
+/* footer */
 footer{
     display: flex;
     padding: 1%;
     background: linear-gradient(#303038, #1e3858); 
     font-weight: bold;
-    font-size:90%;
-    width: 100%;
+    font-size:60%;
+    width: 150%;
+    height: 60px;
     color: aliceblue;
     cursor: pointer;
 	  text-transform: uppercase;
@@ -118,10 +142,23 @@ footer{
     justify-content: space-evenly;
     }
 
+    /* logos*/
 .logos{
     position:relative;
     width: 3%;
     color: rgb(149, 183, 185);
+}
+
+
+
+.ordenLogos{
+  display: flex;
+  position:relative;
+  width: 100%;
+  font-size:70%;
+  color: rgb(149, 183, 185);
+  height: 5px;
+  
 }
 
 a {
@@ -131,11 +168,26 @@ a {
 }
 
 /*FORMULARIO */
+.form_1{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.textoCont{
+ width: 120%;
+ font-size: 13px;
+ text-align: center;
+ justify-content: center;
+ 
+}
+
+
 .formul-1{
     color:antiquewhite;
     height: 10px;
     padding: 3%;
-    width: 500px;
+    width: 250px;
     text-align: center;
     font-size: 18px;
     color:#fffdfd; 
@@ -158,8 +210,8 @@ a {
     height: 50px;
     font-size: 15px;
     cursor: pointer;
-	text-transform: uppercase;
-	transition: .3s ease all; 
+	  text-transform: uppercase;
+	  transition: .3s ease all; 
   }
 
   .formul-1 imput{
@@ -185,45 +237,43 @@ a {
     padding: 1.5%;
 }
 
-/*CARRUSEL*/
-.puntoCarrusel{
-  color: antiquewhite;
-  margin: 30px;
-  font-size: 18px;
-}
 
 /*LOGROS*/
 .logro{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 400px;
   
 }
 
 .logro1{
   background-color: rgb(247, 68, 68);
   margin: 45px;
-  font-size:0;
+  font-size: 0;
   text-align: center;
-  width: 170px;
-  height: 170px;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
   color: antiquewhite;
   border-radius: 60%;
+
 }
 
 .logro2{
   background-color: rgb(247, 68, 68);
   margin: 45px;
   font-size:0;
-  width: 240px;
-  height: 240px;
+  width: 140px;
+  height: 140px;
   color: antiquewhite;
   border-radius: 60%;
 }
 .logro3{
   background-color: rgb(247, 68, 68);
   margin: 45px;
-  width: 350px;
-  height: 350px;
+  width: 200px;
+  height: 200px;
   font-size:0;
   color: antiquewhite;
   border-radius: 60%;
@@ -231,48 +281,307 @@ a {
 .logro4{
   background-color: rgb(247, 68, 68);
   margin: 45px;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   font-size:0;
   color: antiquewhite;
   border-radius: 60%;
 }
 
 /*Presentacion Personal*/
-.present{
-  display: flex;
-  justify-content:center;
-  padding: 15px;
+
+/*foto Perfil */
+
+.fotoPerfil{
+  width: 160px;
+  height: 160px;
 }
 
-.presP p{
-  color: rgb(255, 255, 255);
-  width: 75%;
-  font-size:150%;
+.present{
+  justify-content:center;
+  padding: 20px;
+}
+/* General */
+.quienSoy{
+  display: flex;
+  flex-wrap: wrap;
+  height: 12%;
+  width: 250%;
+  align-items: center;
+  justify-content: center;
+}
+ /* padres section*/
+.sectionQS{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionQS img{
+  justify-content: center;
+  padding: 3%;
+}
+
+.section2QS{
+height: 50%;
+ display: flex;
+ text-align: justify;
+}
+
+.section3QS{
+  height: 50%;
+ display: flex;
+ text-align: justify;
+}
+
+/* clases de los parrafos*/
+.presQ p{
+  color: rgb(0, 0, 0);
+  width: 150px;
+  height: 100px;
+  font-size:100%;
   text-align:justify;
   justify-content:center;
-  padding:3%;
+  padding:5%;
+  background: linear-gradient(#93a089, #63a552);
+  border: 2px solid rgb(95, 95, 95);
+}
+
+.presQ{
+  display: flex;
+  margin: 15px;
+  padding: 0px;
+  height: 73%;
+  width: 100%;
+  font-size: 48%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+
+.presP P{
+  color: rgb(255, 255, 255);
+  width: 50%;
+  font-size:150%; 
+  text-align:justify;
+  justify-content:center;
+  padding:5%;
   background-color: #4e4e50;height: max-content; border-radius: 10px; opacity: 0.8;
   border: 5px solid rgb(255, 0, 0);
 }
 
+.presP{
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+  width: 50%;
+  font-size: 50%;
+}
+
+.presQD{
+  display: flex;
+  margin: 15px;
+  padding: 0px;
+  font-size: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
+
+.presQD p{
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  font-size:50%;
+  text-align:justify;
+  justify-content:center;
+  padding:5%;
+  background: linear-gradient(#e09481, #f72525);
+  border: 3px solid rgb(122, 122, 122);
+  align-items: center;
+  text-align: center;
+}
+
+.presIG{
+  display: flex;
+  margin: 15px;
+  padding: 0px;
+  font-size: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.presIG p{
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  font-size:50%;
+  text-align:justify;
+  justify-content:center;
+  padding:5%;
+  background: linear-gradient(#93a089, #63a552);
+  border: 3px solid rgb(122, 122, 122);
+  align-items: center;
+  text-align: center;
+  
+}
+/*---------------------------------------------*/
+
+/*comienza el codigo para hacerlo responsive*/
 @media (min-width: 425px) {
-   .barraNav i {
+   
+  .barraNav i {
     flex-direction:row;
     display: flex;
+    font-size:300px;
     height: 50px;
     align-items: center;
     width: 100%;
     }
 
+    .fotoPerfil{
+      width: 300px;
+      height: 300px;
+    }
+
+    i.loguito{
+      opacity: 0;
+      font-size:300px;
+      height: 30px;
+    }
+
+    .footer{
+      width: 200%;
+      font-size:20px;
+    }
     .mein video{
-      width: 750px;
+      width: 550px;
       opacity: 0.7;  
     }
+
+    a {
+      width: 100%;
+      color: aliceblue;
+      font-size:15px; 
+  }
+/*Quien Soy*/
+  .quienSoy{
+    flex-wrap: nowrap;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+
+.sectionQS {
+    align-items: center;
+    width: 100%;
+ }
+
+ .section2QS{
+  height: 5%;
+  width: 100%;
+  text-align: justify;
+  }
+  
+  .section3QS{
+  height: 5%;
+  width: 100%;
+   text-align: justify;
+  }
+
+  .presIG p{
+    width: 40%;
+    height: 100%;
+    font-size:80%;
+    text-align: justify;
+    align-items: center;
+    
+  }
+
+  .presIG {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: justify;
+    font-size:small;
+
+}
+
+.presQD{
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size:small;
+  text-align: justify;
+ 
+}
+
+.presQD p{
+  color: rgb(0, 0, 0);
+  width: 50%;
+  height: 100%;
+  font-size:80%;
+  text-align:justify;
+  justify-content:center;
+  padding:3%;
+  background: linear-gradient(#93a089, #7f807f);
+  border: 3px solid rgb(122, 122, 122);
+  align-items: center;
+  text-align: center;
+}
+
+.presQ p{
+  width: 300px;
+  height: 100px;
+  font-size: larger;
+  padding: 30px;
+}
+/*Formulario*/
+.form_1{
+  width: 1050px;
+}
+
+.formul-1{
+  width: 500px;
+}
+
+.textoCont{
+ width: 110%;
+ text-align: center;
+ font-size: large;
+}
+
+/*Logros*/
+.logro{
+  flex-direction:row;
+  width: 100%;
   
 }
 
+.logro1{
+  width: 90px;
+  height: 90px;
+}
+
+.logro2{
+  width: 140px;
+  height: 140px;
+}
+
+.logro3{
+  width: 200px;
+  height: 200px;
+}
+
+.logro4{
+  width: 300px;
+  height: 300px;
+}
+
+/*carrusel*/
 
 
-
-
+}
